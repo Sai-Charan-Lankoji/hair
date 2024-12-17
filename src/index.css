@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a {
+  position: relative;
+  color: rgb(31, 41, 55); /* gray-800 equivalent */
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(75, 85, 99); /* gray-600 equivalent */
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: rgb(75, 85, 99);
+  width: 0;
+  transition: width 300ms ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Optional: If you want to exclude some links */
+a.no-underline::after {
+  display: none;
+}

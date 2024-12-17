@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import  { useRef, useEffect } from 'react';
 import { shopProducts } from '../data/products';
 
 const ShopTheLook = () => {
-  const videoRefs = useRef([]);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
     // Ensure videos loop and play
@@ -10,7 +10,7 @@ const ShopTheLook = () => {
       if (video) {
         video.loop = true;
         video.muted = true; // Mute to allow autoplay in most browsers
-        video.playsinline = true; // For mobile devices
+        
         video.play().catch(error => {
           console.log('Autoplay was prevented:', error);
         });
