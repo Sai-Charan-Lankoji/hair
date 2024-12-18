@@ -1,6 +1,6 @@
 const TryAtHome = () => {
   return (
-    <div className="bg-[#e0ae7b] py-16">
+    <div className="bg-[#f4e4cd] py-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2 space-y-6">

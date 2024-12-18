@@ -13,6 +13,8 @@ import Footer from './components/Footer';
 import BrandScroll from './components/BrandScroll';
 import ProductScroll from './components/ProductScroll';
 import CelebrityApproval from "./components/CelebrityApproval";
+import Testimonial from './components/Testimonials';
+import VideoPlayer from './components/VideoPlayer';
 
 function App() {
   return (
@@ -23,12 +25,14 @@ function App() {
       <CategoryGrid />
       <ShopTheLook />
       <NewLaunches />
-      <TryAtHome />
       <HairTransformation/>
       <ProductScroll />
+      <TryAtHome />
       <ExperienceCenter />
       <BrandScroll />
       <CelebrityApproval />
+      <Testimonial />
+      <VideoPlayer />
       <FAQ />
       <Footer />
     </div>

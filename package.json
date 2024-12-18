@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "@use-gesture/react": "^10.3.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-compare-image": "^3.4.0",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",

@@ -82,7 +82,7 @@ const ExperienceCenter: React.FC = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className=" mx-auto px-4 py-12">
       <h1 className="text-4xl font-serif text-center mb-12">
         Hair Originals Experience Center
       </h1>
@@ -112,9 +112,9 @@ const ExperienceCenter: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="grid md:grid-cols-2 gap-8 bg-[#FAF3E7] rounded-lg overflow-hidden"
+          className="grid md:grid-cols-2 gap-8 bg-[#FAF3E7] rounded-lg overflow-hidden max-w-screen-2xl mx-auto"
         >
-          <div className="h-[400px] overflow-hidden">
+          <div className="h-[400px] w-2/3 overflow-hidden">
             <img
               src={selectedLocation.image}
               alt={selectedLocation.city}

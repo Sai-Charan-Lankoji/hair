@@ -38,7 +38,7 @@ export const testimonials: Testimonial[] = [
     date: '2024-03-20',
     rating: 5,
     comment: 'Loved the product Nice packaging, The extension was neatly packaged. It fitted perfectly on my scalp and looked so original. For all Those looking to buy extension .. must try this',
-    image: 'https://images.unsplash.com/photo-1522337678412-b8ee7f1f77e4?auto=format&fit=crop&q=80'
+    image: 'https://www.hairoriginals.com/cdn/shop/files/Volumizer_Copper_Balayage.jpg?v=1716184388&width=360'
   },
   {
     id: '5',
@@ -46,6 +46,6 @@ export const testimonials: Testimonial[] = [
     date: '2024-02-15',
     rating: 5,
     comment: 'I ordered a hair patch and I am extremely happy with the product. The quality is amazing and the customer service is excellent. Highly recommended!',
-    image: 'https://images.unsplash.com/photo-1522337650137-8b2c7369d3bf?auto=format&fit=crop&q=80'
+    image: 'https://www.hairoriginals.com/cdn/shop/files/Volumizer_Copper_Balayage.jpg?v=1716184388&width=360'
   }
 ];

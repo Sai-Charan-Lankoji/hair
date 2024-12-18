@@ -1,19 +1,26 @@
-import { useEffect } from 'react';
-import { AnimationControls } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
-export const useTestimonialScroll = (
-  isHovered: boolean,
-  controls: AnimationControls
-) => {
+export const useTestimonialScroll = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [start, setStart] = useState(false);
+
   useEffect(() => {
-    controls.start({
-      x: isHovered ? 0 : '-100%',
-      transition: {
-        duration: 20,
-        ease: 'linear',
-        repeat: Infinity,
-        repeatType: 'loop'
-      }
-    });
-  }, [isHovered, controls]);
+    addAnimation();
+  }, []);
+
+  function addAnimation() {
+    if (containerRef.current && scrollerRef.current) {
+      const scrollerContent = Array.from(scrollerRef.current.children);
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        if (scrollerRef.current) {
+          scrollerRef.current.appendChild(duplicatedItem);
+        }
+      });
+      setStart(true);
+    }
+  }
+
+  return { containerRef, scrollerRef, start };
 };

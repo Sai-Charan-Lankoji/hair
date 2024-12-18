@@ -3,6 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        scroll: "scroll var(--animation-duration, 80s) forwards linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
       textUnderline: {
         base: "relative text-gray-800 hover:text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-gray-600 after:w-0 hover:after:w-full after:transition-all after:duration-300",
         // You can add variations if needed

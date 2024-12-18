@@ -64,7 +64,7 @@ const ProductScroll: React.FC = () => {
             >
               <h3
                 className={`text-2xl font-medium ${
-                  index % 2 === 0 ? "text-[#C19A6B]" : "text-[#4A90E2]"
+                  index % 2 === 0 ? "text-[#C19A6B]" : "text-[#474747]"
                 }`}
               >
                 {product.name}

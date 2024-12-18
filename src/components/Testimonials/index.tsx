@@ -1,47 +1,42 @@
-import React, { useRef, useState } from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
-import TestimonialCard from './TestimonialCard';
-import { testimonials } from './data';
-import { useTestimonialScroll } from './hooks/useTestimonialScroll';
+import React from 'react'; 
+import TestimonialCard from './TestimonialCard'; 
+import { testimonials } from './data'; 
+import { useTestimonialScroll } from './hooks/useTestimonialScroll'; 
 import { testimonialStyles as styles } from './utils/styles';
+import { cn } from './utils/cn'; 
 
-const Testimonials: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const controls = useAnimationControls();
-  const containerRef = useRef<HTMLDivElement>(null);
+const Testimonials: React.FC = () => {   
+  const { containerRef, scrollerRef, start } = useTestimonialScroll();
 
-  // Custom hook for scroll animation
-  useTestimonialScroll(isHovered, controls);
+  // Double the testimonials for seamless infinite scroll   
+  const doubledTestimonials = [...testimonials, ...testimonials];    
 
-  // Double the testimonials for seamless infinite scroll
-  const doubledTestimonials = [...testimonials, ...testimonials];
-
-  return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>
-        What People Say About Us
-      </h2>
-
-      <div 
-        ref={containerRef}
-        className={styles.scrollContainer}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <motion.div 
-          className={styles.cardContainer}
-          animate={controls}
-        >
-          {doubledTestimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={`${testimonial.id}-${index}`}
-              {...testimonial}
-            />
-          ))}
-        </motion.div>
-      </div>
-    </div>
-  );
-};
+  return (     
+    <div className="mx-auto px-4 py-16 bg-[#f4e4cd]">       
+      <h2 className={styles.title}>         
+        What People Say About Us       
+      </h2>        
+      <div          
+        ref={containerRef}         
+        className={styles.scrollContainer}       
+      >         
+        <div            
+          ref={scrollerRef}           
+          className={cn(
+            styles.cardContainer,
+            start && "animate-scroll"
+          )}         
+        >           
+          {doubledTestimonials.map((testimonial, index) => (             
+            <TestimonialCard               
+              key={`${testimonial.id}-${index}`}               
+              {...testimonial}             
+            />           
+          ))}         
+        </div>       
+      </div>     
+    </div>   
+  ); 
+};  
 
 export default Testimonials;

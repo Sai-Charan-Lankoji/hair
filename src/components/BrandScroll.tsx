@@ -48,7 +48,7 @@ const brands: Brand[] = [
 
 const BrandScroll: React.FC = () => {
   return (
-    <div className="w-full overflow-hidden bg-white py-12">
+    <div className="w-full overflow-hidden bg-white py-12 mx-auto max-w-7xl">
       <motion.div
         animate={{
           x: [0, -1920, 0],
