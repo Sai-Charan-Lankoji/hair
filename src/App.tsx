@@ -11,6 +11,8 @@ import FAQ from './components/FAQ';
 import HairTransformation from './components/Transformation';
 import Footer from './components/Footer';
 import BrandScroll from './components/BrandScroll';
+import ProductScroll from './components/ProductScroll';
+import CelebrityApproval from "./components/CelebrityApproval";
 
 function App() {
   return (
@@ -23,9 +25,10 @@ function App() {
       <NewLaunches />
       <TryAtHome />
       <HairTransformation/>
-      
+      <ProductScroll />
       <ExperienceCenter />
       <BrandScroll />
+      <CelebrityApproval />
       <FAQ />
       <Footer />
     </div>

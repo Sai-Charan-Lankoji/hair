@@ -12,26 +12,33 @@ const products: Product[] = [
     id: "1",
     name: "SCALP TOPPER",
     image:
-      "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80",
+      "https://www.hairoriginals.com/cdn/shop/files/scalp-topper_27c3e05b-9fc5-487d-8afd-df9aac1d475e.webp?v=1711695398&width=360",
   },
   {
     id: "2",
     name: "VOLUMIZER",
     image:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80",
+      "https://www.hairoriginals.com/cdn/shop/files/Volumizer-and-Clip-Set_74ad16cf-6f5c-41bb-85f6-404d56c69d2f.jpg?v=1694502518&width=360",
   },
   {
     id: "3",
     name: "HAIR PATCH",
     image:
-      "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80",
+      "https://www.hairoriginals.com/cdn/shop/files/Hair-Toppers_042e98dc-5ed8-4f44-a5c6-694408e2b2a2.jpg?v=1694502517&width=360",
   },
   {
     id: "4",
     name: "BUNS",
     image:
-      "https://images.unsplash.com/photo-1522337659844-8635c5c7b1f9?auto=format&fit=crop&q=80",
+      "https://www.hairoriginals.com/cdn/shop/files/1_3.jpg?v=1710424895&width=360",
   },
+  {
+    id: "5",
+    name: "Hair Topper",
+    image:
+      "https://www.hairoriginals.com/cdn/shop/files/Hair-Toppers_042e98dc-5ed8-4f44-a5c6-694408e2b2a2.jpg?v=1694502517&width=360",
+  },
+  
 ];
 
 const ProductScroll: React.FC = () => {
@@ -62,11 +69,11 @@ const ProductScroll: React.FC = () => {
               >
                 {product.name}
               </h3>
-              <div className="w-32 h-32 flex-shrink-0">
+              <div className="w-20 h-20 flex-shrink-0">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-20 h-20 object-cover rounded-lg"
                 />
               </div>
             </div>
